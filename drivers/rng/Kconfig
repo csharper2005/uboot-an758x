@@ -134,3 +134,10 @@ config RNG_EXYNOS
 	  actually implements TRNG SMC calls.
 
 endif
+
+config RNG_AIROHA
+	bool "Airoha True Random Number Generator support"
+	depends on DM_RNG && ARCH_AIROHA
+	help
+	  Enable support for the True Random Number Generator (TRNG) found
+	  on Airoha EN7581/AN7581 SoCs.

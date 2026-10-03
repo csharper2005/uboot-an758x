@@ -545,7 +545,8 @@ KBUILD_AFLAGS   := -D__ASSEMBLY__ -fno-PIE
 KBUILD_CFLAGS   := -Wall -Werror=strict-prototypes -Wno-trigraphs \
 		   -fno-strict-aliasing -fno-common -fshort-wchar -fno-PIE \
 		   -Werror=implicit-function-declaration -Werror=implicit-int \
-		   -Wno-format-security -std=gnu11 #-Wundef Enable it and fix warnings
+		   -Wno-format-security -Wno-error=incompatible-pointer-types \
+		   -std=gnu11 #-Wundef Enable it and fix warnings
 UBOOT_CFLAGS	:= -ffreestanding -fno-builtin
 KBUILD_CFLAGS	+= $(UBOOT_CFLAGS)
 

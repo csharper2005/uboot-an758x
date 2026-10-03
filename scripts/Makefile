@@ -4,6 +4,10 @@
 # the kernel for the build process.
 # ---------------------------------------------------------------------------
 
+KBUILD_CFLAGS   := -Wall -Wstrict-prototypes \
+                   -Wno-format-security \
+                   -fno-strict-aliasing -Wno-error=incompatible-pointer-types
+
 hostprogs-always-$(CONFIG_BUILD_BIN2C)		+= bin2c
 
 # Let clean descend into subdirs
